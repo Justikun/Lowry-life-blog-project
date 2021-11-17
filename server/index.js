@@ -12,7 +12,7 @@ app.use(cors())
 
 // For Heroku to serve my js and css
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'))
+    res.sendFile(path.join(__dirname, '../pages/home/home.html'))
 })
 
 app.get('/js', (req, res) => {
