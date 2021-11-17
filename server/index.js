@@ -10,4 +10,5 @@ app.use(cors())
 
 // DEV
 app.post('/seed', seed)
+
 app.listen(SERVER_PORT, () => console.log(`Up on ${SERVER_PORT}`))
