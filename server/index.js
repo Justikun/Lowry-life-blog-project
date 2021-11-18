@@ -1,25 +1,32 @@
+// Server setup
 require('dotenv').config()
 
-const path = require('path')
 const express = require('express')
-const app = express()
+const path = require('path')
 const cors = require('cors')
-const {SERVER_PORT} = process.env
-const {seed} = require('./seed.js')
 
+const app = express()
 app.use(express.json())
 app.use(cors())
 
-// For Heroku to serve my js and css
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../pages/home/home.html'))
-})
+// TODO: include and initialize the rollbar library with your access token 
 
-// app.get('/js', (req, res) => {
-//     res.sendFile(path.join(__dirname, './public/main.js'))
-// })
+
+
+// Included JS files
+const {seed} = require('./seed')
+const {
+    getHomePosts
+} = require('./controller')
+
 // DEV
 app.post('/seed', seed)
 
+// HOME
+// app.get('/home', getHomePosts) FIXME:
+
+// Listening port
+const {SERVER_PORT} = process.env
 const port = process.env.PORT || SERVER_PORT
-app.listen(port, () => console.log(`Up on ${port}`))
+
+app.listen(port, () => console.log(`Shrek's swap is located on ${port}`))

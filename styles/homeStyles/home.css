@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&display=swap");
-body {
+* {
   font-family: 'Montserrat', sans-serif;
+  color: #121212;
+}
+
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +15,6 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: #fdfdfd;
-  color: #121212;
 }
 
 .top-bar__container {
@@ -62,6 +65,10 @@ body {
 
 .top-bar__container .nav-items__container h4 {
   margin-right: 25px;
+}
+
+.top-bar__container .nav-items__container h4 a {
+  text-decoration: none;
 }
 
 .main-content__container {
