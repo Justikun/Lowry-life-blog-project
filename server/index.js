@@ -10,7 +10,10 @@ app.use(express.json())
 app.use(cors())
 
 // TODO: include and initialize the rollbar library with your access token 
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "/pages/home/home.html"))
+    // rollbar.info("HTML file server successfully setup")
+})
 
 
 // Included JS files
@@ -26,7 +29,7 @@ app.post('/seed', seed)
 // app.get('/home', getHomePosts) FIXME:
 
 // Listening port
-const {SERVER_PORT} = process.env
-const port = process.env.PORT || SERVER_PORT
+// const {SERVER_PORT} = process.env
+const port = process.env.PORT || 9870
 
-app.listen(port, () => console.log(`Shrek's swap is located on ${port}`))
+app.listen(port, () => console.log(`Shrek's swamp is located on ${port}`))
