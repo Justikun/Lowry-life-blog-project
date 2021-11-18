@@ -34,4 +34,4 @@ function getHomePosts () {
     .catch(err => console.log("______ERROR______" + err))
 }
 
-getHomePosts()
+// getHomePosts()

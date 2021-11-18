@@ -1,5 +1,5 @@
 // Server setup
-require('dotenv').config()
+// require('dotenv').config()
 
 const express = require('express')
 const path = require('path')
@@ -11,10 +11,11 @@ app.use(cors())
 
 // TODO: include and initialize the rollbar library with your access token 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/pages/home/home.html"))
+    res.sendFile(path.join(__dirname, "../pages/home/home.html"))
     // rollbar.info("HTML file server successfully setup")
 })
 
+app.use("/js", express.static(path.join(__dirname, "../pages/home/home.js")))
 
 // Included JS files
 // const {seed} = require('./seed')
