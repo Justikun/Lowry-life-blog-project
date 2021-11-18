@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
 
 
 // Included JS files
-const {seed} = require('./seed')
+// const {seed} = require('./seed')
 const {
     getHomePosts
 } = require('./controller')
 
 // DEV
-app.post('/seed', seed)
+// app.post('/seed', seed)
 
 // HOME
 // app.get('/home', getHomePosts) FIXME:
