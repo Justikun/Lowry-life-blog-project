@@ -15,7 +15,10 @@ app.get('/', (req, res) => {
     // rollbar.info("HTML file server successfully setup")
 })
 
+app.use("/css", express.static(path.join(__dirname, "../styles/homeStyles/home.css")))
+
 app.use("/js", express.static(path.join(__dirname, "../pages/home/home.js")))
+
 
 // Included JS files
 // const {seed} = require('./seed')
