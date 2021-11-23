@@ -1,12 +1,11 @@
-// Server setup
+//do this npm i sequelize pg pg-hstore
 require('dotenv').config()
 const {CONNECTION_STRING} = process.env
-
-// Inline sequel
 const Sequelize = require('sequelize')
+
 const sequelize = new Sequelize(CONNECTION_STRING, {
-    dialect: 'postgres',
-    dialectOption: {
+    dialect: 'postgres', 
+    dialectOptions: {
         ssl: {
             rejectUnauthorized: false
         }
@@ -16,9 +15,9 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
     getHomePosts: (req, res) => {
         sequelize.query(`
-            SELECT * FROM users
+            SELECT * from posts
         `).then(posts => {
-                res.status(200).send(posts[0])
+            res.status(200).send(posts[0])
         })
         .catch(err => console.log(err))
     }
