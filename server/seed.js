@@ -36,7 +36,7 @@ module.exports = {
             "user_id" integer NOT NULL REFERENCES Users(user_id),
             "post_title" varchar(255) NOT NULL,
             "post_text" varchar(10000) NOT NULL,
-            "post_date" DATE NOT NULL
+            "post_date" timestamp NOT NULL
         );
 
         CREATE TABLE Auth (
@@ -60,9 +60,12 @@ module.exports = {
         VALUES ('Justin', 'Lowry', 'Here to blog my life as a software engineer!', 'And thats the thing about life, you get to create it, design it, and live it.'),
         ('Matt', 'Healy', 'Lead singer for the 1975', 'Awesome quote here.'),
         ('Matt', 'Healy2', 'Lead singer for the 1975', 'Awesome quote here.');
+
         -- Inserting test posts
         INSERT INTO Posts (user_id, post_title, post_text, post_date)
-        VALUES (1, 'I went to the Silicon Slopes tech conference today! Here is what I learned', 'Okay. This is the text content of the blog post', '2021-11-16');
+        VALUES (1, 'I went to the Silicon Slopes tech conference today! Here is what I learned', 'Okay. This is the text content of the blog post', '2021-1-23 01:50:02'),
+        (1, 'OMG. Lagoon has a new ridE!', 'Text content of blog post', '2021-9-11 12:01:23'),
+        (2, 'Met my girlfriends parents for the first time.', 'Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah', '2021-11-24 11:20:00');
         `).then(() => {
             console.log("DB SUCCESSFULLY SEEDED!")
             res.sendStatus(200)

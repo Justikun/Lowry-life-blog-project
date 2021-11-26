@@ -15,7 +15,11 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
     getHomePosts: (req, res) => {
         sequelize.query(`
-            SELECT * from posts
+            SELECT *
+            FROM posts p
+                INNER JOIN users u
+                    ON p.user_id =  u.user_id
+                ORDER BY p.post_date desc
         `).then(posts => {
             res.status(200).send(posts[0])
         })
