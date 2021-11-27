@@ -25,7 +25,8 @@ app.use(cors())
 const {seed} = require('./seed')
 
 const {
-    getHomePosts
+    getHomePosts,
+    getYourPosts
 } = require('./controller')
 
 // DEV
@@ -33,6 +34,8 @@ app.post('/seed', seed)
 
 // HOME
 app.get('/home', getHomePosts)
+
+app.get('/createPost/yourPosts', getYourPosts)
 
 // Listening port
 const {SERVER_PORT} = process.env

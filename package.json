@@ -1,7 +1,6 @@
 {
   "name": "blog_project",
   "version": "1.0.0",
-  "description": "",
   "main": "server/server.js",
   "dependencies": {
     "axios": "^0.24.0",
@@ -10,6 +9,7 @@
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "node": "^17.1.0",
+    "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.11.0"
@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/Justikun/Lowry-life-blog-project/issues"
   },
-  "homepage": "https://github.com/Justikun/Lowry-life-blog-project#readme"
+  "homepage": "https://github.com/Justikun/Lowry-life-blog-project#readme",
+  "description": ""
 }

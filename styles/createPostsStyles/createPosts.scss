@@ -22,33 +22,72 @@ $h6-disabled: 12px;
     box-shadow: 0px 4px 4px #888888;
     margin-right: 30px;
     margin-left: 30px;
-    min-width: 500px;
+    min-width: 150px;
+    width: 500px;
     min-height: 500px;
-    flex-grow: 1;
 
     h3 {
         margin-left: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
-
         font-size: $h3-heading;
     }
-    div {
-        background-color: lightgreen;
-        width: 100%;
-        flex-grow: 2;
+
+    .your_post__container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        height: 100px;
+        align-items: center;
+        // background-color: lightcoral;
+        // border-bottom: 1px solid lightgray;
+        // box-shadow: 0 1px 1px -1px lightgray;
+
+        .post-info__container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+
+            .post_title {
+
+            }
+    
+            .post_date {
+                font-size: $h6-disabled;
+                font-weight: bold;
+                opacity: .4;
+                margin-top: 10px;
+            }
+        }
+
+
+        .edit_button {
+            margin-right: 10px;
+            text-decoration: underline;
+        }
+
+        .trash_button {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
 #editor__container {
     display: flex;
     flex-direction: column;
-    border: 4px solid lightcoral;
-    min-height: 500px;
+    box-shadow: 0px 4px 4px #888888;
+    min-width: 500px;
     margin-right: 30px;
     margin-bottom: 30px;
     flex-grow: 2;
     align-items: center;
+    justify-content: space-between;
 
     #post-title__editor {
         text-align: center;
@@ -56,9 +95,11 @@ $h6-disabled: 12px;
         border: none;
         resize: none;   
         margin-top: 30px;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
         width: 80%;
+        height: 100px;
 
+        background-color: #fdfdfd;
         font-size: $h3-heading;
     }
 
@@ -67,10 +108,28 @@ $h6-disabled: 12px;
         border: none;
         resize: none;   
         width: 80%;
+        // height: 300px;
         margin-bottom: 30px;
-
+        
+        background-color: #fdfdfd;
         font-size: $h5-standard;
         font-weight: 400;
         letter-spacing: 1px;
+    }
+
+    #editor_options_container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-decoration: underline;
+        align-items: center;
+        
+        #delete_icon {
+            margin-left: 25px;
+        }
+        
+        #post_button {
+            margin-right: 25px;
+        }
     }
 }

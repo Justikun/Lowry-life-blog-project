@@ -24,5 +24,18 @@ module.exports = {
             res.status(200).send(posts[0])
         })
         .catch(err => console.log(err))
+    },
+
+    getYourPosts: (req, res) => {
+        sequelize.query(`
+            SELECT *
+            FROM posts p
+                INNER JOIN users u
+                    ON p.user_id =  u.user_id
+                ORDER BY p.post_date desc
+        `).then(posts => {
+            res.status(200).send(posts[0])
+        })
+        .catch(err => console.log(err))
     }
 }

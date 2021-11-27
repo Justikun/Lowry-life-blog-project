@@ -24,25 +24,14 @@
         </div>
     </div>
     <div class='main-content__container'>
-        <div id="all-posts__container">
-            <h3>Yours Posts</h3>
-            <div>
-
-            </div>
-        </div>
+        <div id="all-posts__container"></div>
         <div id="editor__container">
-            <textarea id="post-title__editor" maxlength="110" placeholder="Post Title"></textarea>
-            <textarea id="post-text__editor">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Amet nisl suscipit adipiscing bibendum est. Eget nulla facilisi etiam dignissim diam quis. Quis lectus nulla at volutpat diam ut. Imperdiet sed euismod nisi porta lorem. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Nisi est sit amet facilisis magna. Tristique senectus et netus et malesuada. Adipiscing commodo elit at imperdiet dui accumsan. Auctor neque vitae tempus quam. Egestas fringilla phasellus faucibus scelerisque eleifend.
-
-                    Purus non enim praesent elementum facilisis leo. Varius morbi enim nunc faucibus a pellentesque sit. Rhoncus aenean vel elit scelerisque mauris. Quis risus sed vulputate odio ut. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Ligula ullamcorper malesuada proin libero nunc consequat. Vitae justo eget magna fermentum. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. Duis ultricies lacus sed turpis tincidunt. Nisi vitae suscipit tellus mauris a diam maecenas sed. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Praesent tristique magna sit amet purus gravida quis. Fermentum dui faucibus in ornare quam viverra.
-                    
-                    Proin sed libero enim sed faucibus. Ut diam quam nulla porttitor. Nulla porttitor massa id neque aliquam. Tempus egestas sed sed risus pretium. Tellus id interdum velit laoreet. Duis convallis convallis tellus id interdum velit laoreet. Maecenas ultricies mi eget mauris. Sed augue lacus viverra vitae. Ac felis donec et odio pellentesque diam volutpat. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Tellus elementum sagittis vitae et leo. Risus ultricies tristique nulla aliquet. Etiam dignissim diam quis enim lobortis. Varius quam quisque id diam vel quam elementum. Tempus iaculis urna id volutpat lacus laoreet. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Vitae et leo duis ut.
-                    
-                    Tellus elementum sagittis vitae et leo duis ut. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Semper feugiat nibh sed pulvinar proin gravida. Ut ornare lectus sit amet est placerat. Vivamus arcu felis bibendum ut tristique et egestas. Mattis rhoncus urna neque viverra justo. Ultricies tristique nulla aliquet enim. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. A lacus vestibulum sed arcu non odio. Pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna. Aenean sed adipiscing diam donec adipiscing tristique risus. Iaculis eu non diam phasellus vestibulum lorem. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Ultrices sagittis orci a scelerisque purus semper eget. Consequat semper viverra nam libero justo laoreet. Lacinia at quis risus sed vulputate.
-                    
-                    Integer vitae justo eget magna fermentum iaculis eu non. Donec adipiscing tristique risus nec feugiat in. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Elementum integer enim neque volutpat ac tincidunt. Volutpat blandit aliquam etiam erat velit scelerisque in. Nec dui nunc mattis enim. Neque aliquam vestibulum morbi blandit cursus risus at. At lectus urna duis convallis. Proin fermentum leo vel orci porta non. Tempus egestas sed sed risus pretium quam vulputate dignissim. Ultrices sagittis orci a scelerisque purus semper eget. Lectus quam id leo in vitae turpis massa sed. Blandit aliquam etiam erat velit scelerisque in dictum non. Venenatis cras sed felis eget velit aliquet sagittis id consectetur. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Consectetur adipiscing elit ut aliquam purus sit amet. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.
-            </textarea>
+            <textarea id="post-title__editor" maxlength="110" placeholder="Post Title" onkeypress="return event.keyCode != 13"></textarea>
+            <textarea id="post-text__editor" placeholder="Type here"></textarea>
+            <div id="editor_options_container">
+                <h5 id="delete_icon">Delete</h5>
+                <h5 id="post_button">Post</h5>
+            </div>
         </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
