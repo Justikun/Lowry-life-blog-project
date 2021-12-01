@@ -78,6 +78,8 @@
 #all-posts__container .your_post__container .edit_button {
   margin-right: 10px;
   text-decoration: underline;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #all-posts__container .your_post__container .trash_button {
@@ -90,6 +92,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #editor__container {
@@ -133,7 +137,6 @@
   border: none;
   resize: none;
   width: 80%;
-  margin-bottom: 30px;
   background-color: #fdfdfd;
   font-size: 18px;
   font-weight: 400;
@@ -156,9 +159,13 @@
 
 #editor__container #editor_options_container #delete_icon {
   margin-left: 25px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #editor__container #editor_options_container #post_button {
   margin-right: 25px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
-/*# sourceMappingURL=createPosts.css.map */
+/*# sourceMappingURL=myPosts.css.map */

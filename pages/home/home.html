@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../styles/homeStyles/home.css">
+    <link rel="stylesheet" href="../../styles/myPostsStyles/loadAnimation.css">
     <!-- <link rel="stylesheet" href="/css"> -->
 </head>
 <body>
@@ -18,14 +19,20 @@
             <!-- <h4><a id="today-btn">Today</a></h4> -->
             <h4><a id="all-blogs-btn">All Blogs</a></h4>
             <div id="profile-pic">
-                <img src="https://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg" alt="profile-pic">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-f59a5cbb_1594336804430_original._CR0,350,1400,1400_._FMjpg_._SS205_.jpeg" alt="profile-pic">
             </div>
         </div>
     </div>
     <div class='main-content__container'>
+        <div class="loader-wrapper">
+            <span class="loader">
+                <span class="loader-inner">
+                </span>
+            </span>
+        </div>
     </div>
     <button id="create-post__btn">
-        <a href="../createPost/createPost.html">Create Post</a>
+        <a href="../myPosts/myPosts.html">My Posts</a>
     </button>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="home.js"></script>

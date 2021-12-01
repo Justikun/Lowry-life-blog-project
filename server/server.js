@@ -9,33 +9,37 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-// TODO: include and initialize the rollbar library with your access token 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, "../pages/home/home.html"))
-//     // rollbar.info("HTML file server successfully setup")
-// })
-// app.use("/home", express.static(path.join(__dirname, "../styles/homeStyles/home.html")))
-
-// app.use("/css", express.static(path.join(__dirname, "../styles/homeStyles/home.css")))
-
-// app.use("/js", express.static(path.join(__dirname, "../pages/home/home.js")))
-
-
 // Included JS files
 const {seed} = require('./seed')
 
 const {
     getHomePosts,
-    getYourPosts
+    getYourPosts,
+    postBlogPost,
+    deletePost,
+    editPost,
+    updatePost,
+    getUserInfo
 } = require('./controller')
 
 // DEV
 app.post('/seed', seed)
 
+//USERS
+app.get('/getUserInfo', getUserInfo)
+
 // HOME
 app.get('/home', getHomePosts)
 
-app.get('/createPost/yourPosts', getYourPosts)
+// All Posts
+app.get('/editPost/:id', editPost)
+
+// Post Editor
+app.get('/myPosts/yourPosts', getYourPosts)
+app.post('/postBlogPost', postBlogPost)
+app.post('/updatePost', updatePost)
+
+app.delete('/deletePost/:id', deletePost)
 
 // Listening port
 const {SERVER_PORT} = process.env

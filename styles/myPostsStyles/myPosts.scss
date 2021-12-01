@@ -66,6 +66,7 @@ $h6-disabled: 12px;
         .edit_button {
             margin-right: 10px;
             text-decoration: underline;
+            cursor: grab;
         }
 
         .trash_button {
@@ -74,6 +75,7 @@ $h6-disabled: 12px;
             height: 20px;
             align-items: center;
             justify-content: center;
+            cursor: grab;
         }
     }
 }
@@ -108,9 +110,6 @@ $h6-disabled: 12px;
         border: none;
         resize: none;   
         width: 80%;
-        // height: 300px;
-        margin-bottom: 30px;
-        
         background-color: #fdfdfd;
         font-size: $h5-standard;
         font-weight: 400;
@@ -126,10 +125,12 @@ $h6-disabled: 12px;
         
         #delete_icon {
             margin-left: 25px;
+            cursor: grab;
         }
         
         #post_button {
             margin-right: 25px;
+            cursor: grab;
         }
     }
 }
